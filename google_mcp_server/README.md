@@ -14,7 +14,7 @@ An MCP-style server written in Python using FastAPI that integrates with Google 
 ## File Structure
 
 ```text
-google-mcp-server/
+google_mcp_server/
 ├── server.py          → FastAPI app with tool endpoints
 ├── auth.py            → Google OAuth authentication helper
 ├── docs_tool.py       → Google Docs tool (append content)
@@ -56,7 +56,7 @@ To interact with Google Docs and Gmail, you must configure a project on Google C
    - Set the Application Type to **Desktop app**.
    - Name the client (e.g., `Desktop Client`).
    - Click **Create**.
-   - Download the client credentials JSON file, rename it to `credentials.json`, and place it in the `google-mcp-server/` directory.
+   - Download the client credentials JSON file, rename it to `credentials.json`, and place it in the `google_mcp_server/` directory.
 
 ---
 
@@ -64,7 +64,7 @@ To interact with Google Docs and Gmail, you must configure a project on Google C
 
 1. Navigate to the project directory:
    ```bash
-   cd google-mcp-server
+   cd google_mcp_server
    ```
 
 2. (Optional but recommended) Set up a virtual environment:

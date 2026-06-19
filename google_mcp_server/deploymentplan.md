@@ -26,7 +26,7 @@ Deploying a local command-line interactive server to a cloud-native platform lik
 
 To support Railway deployment, we will apply these non-breaking modifications to the existing server code:
 
-### Edit 1: [auth.py](file:///Users/darshan/Desktop/Build%20Projects/MCP%20Server/google-mcp-server/auth.py)
+### Edit 1: [auth.py](file:///Users/darshan/Desktop/Build%20Projects/MCP%20Server/google_mcp_server/auth.py)
 Update credential loading logic to look for environment variables before falling back to local files.
 
 ```python
@@ -51,7 +51,7 @@ def get_credentials():
             print(f"Error loading token.json: {e}")
 ```
 
-### Edit 2: [server.py](file:///Users/darshan/Desktop/Build%20Projects/MCP%20Server/google-mcp-server/server.py)
+### Edit 2: [server.py](file:///Users/darshan/Desktop/Build%20Projects/MCP%20Server/google_mcp_server/server.py)
 Integrate environment bypass checks and dynport resolution.
 
 ```python
@@ -78,7 +78,7 @@ Ensure your files are committed to a GitHub repository (excluding `credentials.j
 ### Step 2: Create Railway Project
 1. Log in to [Railway.app](https://railway.app/).
 2. Click **New Project** and select **Deploy from GitHub repo**.
-3. Choose your repository containing `google-mcp-server`.
+3. Choose your repository containing `google_mcp_server`.
 
 ### Step 3: Configure Environment Variables
 In the **Variables** tab of your Railway service, add the following key-values:
@@ -93,6 +93,6 @@ In the **Variables** tab of your Railway service, add the following key-values:
 ### Step 4: Run Command Config
 Go to **Settings > Deploy > Start Command** on Railway and configure it to run:
 ```bash
-uvicorn google-mcp-server.server:app --host 0.0.0.0 --port $PORT
+uvicorn google_mcp_server.server:app --host 0.0.0.0 --port $PORT
 ```
 *(Since `requirements.txt` is now at the repository root, Railpack will build it automatically, and the above command imports the app module via path).*
