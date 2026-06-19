@@ -1,0 +1,39 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Local caches and databases
+data/cache/
+data/runs.db
+
+# OS generated files
+.DS_Store
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# IDE files
+.idea/
+.vscode/
+
+# MCP local server env configurations
+config/mcp/*.env
+!config/mcp/*.env.example
+
+# Node modules / package artifacts
+node_modules/
+dist/
+build/
+.npm/
+package-lock.json
+
+# Private credentials and environment variables
+.env
+Credentials.json
+token.json
+*.json.bak
+

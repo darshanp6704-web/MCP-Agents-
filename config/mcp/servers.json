@@ -1,0 +1,14 @@
+{
+  "mcpServers": {
+    "google-docs": {
+      "command": "node",
+      "args": ["mcp-servers/google-docs-mcp/dist/index.js"],
+      "envFile": "config/mcp/docs-mcp.env"
+    },
+    "gmail": {
+      "command": "node",
+      "args": ["mcp-servers/gmail-mcp/dist/index.js"],
+      "envFile": "config/mcp/gmail-mcp.env"
+    }
+  }
+}
